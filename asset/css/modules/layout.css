@@ -1,0 +1,26 @@
+.container-xl {
+  width: 100%;
+  max-width: 1320px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1432px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.container--banner {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1432px;
+  max-width: 100%;
+  padding: 0 16px;
+}

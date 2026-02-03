@@ -1,0 +1,235 @@
+/*File nay de tao cac class de khai bao*/
+.uppercase {
+  text-transform: uppercase;
+}
+
+.title--text {
+  font-weight: 500;
+}
+
+.btn--arrow {/*Tao khung cho cac nut mui ten*/
+  display: flex;/*can giua mui ten ben trong khung*/
+  align-items: center;/*can giua mui ten theo chieu doc*/
+  justify-content: center;/*can giua mui ten theo chieu ngang*/
+  width: 45px;/*Chieu rong khung nut*/
+  height: 45px;/*Chieu cao khung nut*/
+  transform: rotate(45deg);/*xoay ca khung 45 do de tao thanh hinh thoi*/
+  border-radius: 4px;/*Bo tron nhe cac goc cua hinh thoi*/
+  transition: background 0.2s linear;/*Hieu ung doi mau muot ma khi hover*/
+  cursor: pointer;/*Hien ban tay khi di chuot vao*/
+}
+.btn--arrow svg {/*chinh vi tri icon mui ten trong khung k bi xoay theo khung*/
+  transform: rotate(-45deg);/*Xoay nguoc icon lai 45 do*/
+  width: 20px;/*kich thuoc chieu rong icon*/
+  height: 20px;/*Kich thuoc chieu cao icon*/
+  transition: stroke 0.2s linear;/*Hieu ung chuyen mau cho net ve (stroke) khi co thay doi*/
+}
+
+.btn--arrow.bgRgbBlack {/*Trang thai mac dinh cua nut co nen den mo*/
+  background: rgba(0, 0, 0, 0.2);/*Nen den trong suot 20%*/
+}
+.btn--arrow.bgRgbBlack:hover {
+  background: rgb(128, 22, 24);/*Chuyen mau khi di chuot vao*/
+}
+.btn--arrow.bgRgbBlack svg {/*Trang thai mac dinh cua icon mui ten*/
+  stroke: white;
+}
+
+.btn--arrow.bdRed {
+  background: white;
+  border: 1.5px solid rgb(128, 22, 24);
+}
+.btn--arrow.bdRed:hover {
+  background: rgb(128, 22, 24);
+}
+.btn--arrow.bdRed:hover svg {
+  stroke: white;
+}
+.btn--arrow.bdRed svg {
+  stroke: rgb(128, 22, 24);
+  stroke-width: 1.5px;
+}
+
+.btn--arrow.bdWhite {
+  border: 1.5px solid white;
+}
+.btn--arrow.bdWhite:hover {
+  background: white;
+}
+.btn--arrow.bdWhite:hover svg {
+  stroke: rgb(128, 22, 24);
+}
+.btn--arrow.bdWhite svg {
+  stroke: white;
+  stroke-width: 1.5px;
+}
+
+.blockBtn-conentArrow {/*Tao flex container dung de dan hang ngang cho cac thanh phan ben trong nut (vd chu xem them di kem voi bieu tuong mui ten)*/
+  display: flex;/*Kich hoat flexbox de cac thanh phan con nam cung mot hang ngang*/
+  align-items: center;/*Can chinh chu va icon luon thang hang o giua theo chieu doc*/
+  column-gap: 8px;/*Tao khoang cach deu 8px giua chu va bieu tuong*/
+}
+.blockBtn-conentArrow span {/*Dinh dang chu nam ben trong nut bam (vd xem them, kham pha,...)*/
+  margin-right: 5px;/*Tao them mot khoang cach nho 5px ben phai chu*/
+  font-size: 1.6rem;/*kich thuoc chu la 16px*/
+  font-weight: 600;/*Do dam cua chu o muc trung binh*/
+  text-transform: uppercase;/*Luoon viet hoa*/
+}
+
+.bg--section {/*Tao hinh khoi dac biet cho doan phan trang*/
+  padding: 80px 0 80px;/*Tao khoang cach trong 80px o tren va duoi de nd khong bi dinh vao mep*/
+  background: rgb(243, 243, 243);/*Mau nen xam nhat de phan viet voi cac phan khac*/
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 50% 100%, 0 92%);/*Tao phan day nhon*/
+}
+
+.alignCenter {/*can giua cac phan tu con theo chieu ngnag*/
+  display: flex;
+  justify-content: center;
+}
+
+.title--session {/*Dinh dang tieu de chinh cho tung doan section*/
+  font-size: 2.8rem;/*kich thuoc chu la 28px*/
+  font-weight: 600;/*do dam nhat*/
+  text-align: center;/*can chu ra chinh giua theo chieu ngnag*/
+}
+
+.text--center {/*Can giua nd ben trong khoi*/
+  text-align: center;
+}
+
+.title--font48 {/*Dinh nghia kich thuoc chu lon cho cac tieu de quan trong*/
+  font-size: 4.8rem;/*kich thuoc chu 48px*/
+  font-weight: 600;/*Do dam nhat cua chu*/
+}
+
+.side--toolbar {/*Tao thanh cong cu co dinh*/
+  position: fixed;/*co dinh vi tri thanh cong cu so voi cua so trinh duyet*/
+  right: 20px;/*Cach le phai man hinh 20px*/
+  bottom: 30px;/*cach le duoi man hinh 30px*/
+  z-index: 99999;/*dam bao thanh nay luon nam tren cung, khong vi cac thanh phan khac che mat*/
+}
+.side--toolbar__item.gray a {
+  background: rgb(82, 82, 82);
+}
+.side--toolbar__item.red a {
+  background: rgb(161, 19, 22);
+}
+.side--toolbar__item a {/*biến các đường dẫn (<a>) vốn dĩ là dạng văn bản thành các hình khối vuông vắn, cân đối để chứa icon.*/
+  display: flex;/*can giua icon ben trong nut*/
+  align-items: center;/*can giua icon theo chieu doc*/
+  justify-content: center;/*can giua icon theo chieu ngang*/
+  width: 40px;/*Chieu rong nut la 40px*/
+  height: 40px;/*chieu cao nut la 40px*/
+  border-radius: 4px;/*bo tron goc*/
+}
+.side--toolbar__item:not(:first-child) {/* Chọn tất cả các item trong toolbar, NGOẠI TRỪ phần tử đầu tiên */
+  margin-top: 8px;/* Tạo khoảng cách phía trên là 8px */
+}
+.side--toolbar__item svg {
+  width: 20px;/*Dat chieu rong cua bieu tuong la 20px*/
+  height: 20px;/*Dat chieu cao cua bieu tuong la 20px*/
+  stroke: white;/*Dat mau cua net ve la mau trang*/
+}
+
+.mr--section {/*dùng để quản lý khoảng cách giữa các phần lớn (Section) trên trang web. Nó giúp tạo ra "không gian thở" cho thiết kế, làm cho trang web trông thoáng đãng và dễ nhìn hơn.*/
+  margin-top: 8rem;
+}
+.search-overlay {/*tạo một lớp phủ mờ (Overlay) toàn màn hình, thường xuất hiện khi người dùng nhấn vào nút tìm kiếm. Nó giúp tập trung sự chú ý vào khung nhập liệu và làm mờ đi các nội dung gây nhiễu phía sau.*/
+  display: none;/*Mac dinh la an, dung js de hien(display: flex/block)*/
+  position: fixed; /* Quan trọng: Sử dụng fixed để cố định vị trí */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);/* Màu đen trong suốt 50% */
+/* Hiệu ứng kính mờ (Frosted Glass)*/
+  -webkit-backdrop-filter: blur(8px);/* Hỗ trợ trình duyệt Safari */
+  backdrop-filter: blur(8px);/* Làm mờ các thành phần nằm phía sau lớp phủ */
+
+  z-index: 9999;/* Đảm bảo lớp phủ này nằm trên mọi nội dung khác của web */
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.search-overlay.show {
+  display: block;/* Chuyển từ 'none' sang 'block' để phần tử xuất hiện trong cấu trúc trang */
+  opacity: 1;/* Chuyển từ trong suốt (0) sang hiển thị rõ nét (1) */
+}
+
+/* Nút tắt chức năng tìm kiếm */
+.search-close-btn {
+  position: absolute; /* Định vị tuyệt đối so với .search-overlay */
+  top: 0; /* Cách mép trên 20px */
+  right: 0; /* Cách mép phải 20px */
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: none;
+  background: white;
+  font-size: 40px;
+  font-weight: 300;
+  cursor: pointer;
+  line-height: 1;
+  z-index: 10000; /* Đảm bảo nút luôn nằm trên lớp phủ */
+}
+
+/* Khung chứa thanh tìm kiếm */
+.search-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Kích thước */
+  width: 90%;/* Co giãn linh hoạt trên điện thoại */
+  height: 48px;/*Chieu cao cho 1 dong nhap lieu*/
+  max-width: 962px;/* Giới hạn độ rộng tối đa trên máy tính để không bị quá dài */
+  display: flex;/*cho icon va chu nam tren 1 hang ngang*/
+  align-items: center;
+  /*giao dien*/
+  background-color: white;
+  padding: 10px 20px;/* Khoảng cách đệm bên trong để nội dung không chạm mép */
+}
+
+/* Các phần tử còn lại của thanh tìm kiếm */
+.search-bar-icon {
+  border-left: 1px solid gray;
+  padding: 8px;
+  width: 35px;
+  height: 48px;
+  stroke: #888;
+  cursor: pointer;
+  order: 2;
+}
+
+.search-input {
+  border: none;/*loai bo khung vien mac dinh cua the input*/
+  outline: none;/*Loai bo duong vien xanh khi nguoi dung nhan vao focus*/
+  flex-grow: 1; /*Cho phep o input chiem toan bo vi tri con trong*/
+  font-size: 16px;/*Kich thuoc chu nhap vao*/
+  padding: 8px;/*Tao khoang cach nho de chu k dinh vao mep*/
+  background: transparent;/*Nhin xuyen qua nen lop cha*/
+  order: 1;/*Vi tri dau tien ben trai icon*/
+}
+
+/* Các quy tắc responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+  .search-container {
+    width: 95%;/* Tăng từ 90% lên 95% để giảm khoảng trống thừa ở hai bên */
+    padding: 8px 15px;/* Thu nhỏ padding để dành thêm chỗ cho ô nhập liệu */
+  }/* Giảm cỡ chữ để cân đối với màn hình nhỏ */
+  .search-input {
+    font-size: 14px;/* Giảm từ 16px xuống 14px giúp hiển thị được nhiều từ hơn khi gõ */
+
+  }
+  /* Giữ nguyên kích thước icon nhưng đảm bảo nó vẫn dễ bấm */
+  .search-bar-icon {
+    padding: 8px;
+    width: 35px;
+    height: 48px;
+  }
+  /* Định vị lại nút Đóng (X) ở góc màn hình */
+  .search-close-btn {
+    top: 0px;/* Đưa sát lên mép trên */
+    right: 0px;/* Đưa sát ra mép phải */
+    font-size: 35px;/* Kích thước lớn để người dùng dễ dàng chạm ngón tay vào để thoát */
+  }
+}

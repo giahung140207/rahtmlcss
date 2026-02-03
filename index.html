@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- gg font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />  <!-- trình duyệt thiết lập kết nối sớm với máy chủ chứa tệp định dạng font của Google. Việc này giúp giảm thời gian chờ khi tải font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><!-- Tương tự dòng trên, nhưng dành cho máy chủ chứa dữ liệu font thực tế (gstatic). Thuộc tính crossorigin đảm bảo việc tải tài nguyên không bị chặn bởi chính sách bảo mật của trình duyệt. --> 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" 
+    /> <!-- đường dẫn trực tiếp để lấy font Archivo. -->
+
+    <!-- css -->
+    <link rel="stylesheet" href="./asset/css/main.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" 
+    /> <!-- tệp CSS của thư viện Swiper` `Swiper là một thư viện rất phổ biến để tạo các hiệu ứng trượt (slider), banner chạy ngang hoặc các khối nội dung có thể vuốt trên điện thoại -->
+</head>
+<body>
+    <h1 style="display: none;">MECURY CHEMICAL</h1>
+    <header id="header" class="header">
+        <div class="container">
+            <div class="header__child">
+                <div class="header__logo">
+                    <a href="">
+                        <img src="https://mercurychemical.com/wp-content/uploads/2024/10/logo-mercury.svg" alt="logo">
+                    </a>
+                </div>
+                <nav class="nav--menu">
+                    <ul class="header--menu">
+                        <li class="header--menu__item">
+                            <a href="">
+                                <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="size-6"
+                                >
+                                <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                                />
+                            </svg>
+                            </a>
+                        </li>
+                        <li class="header--menu__item">
+                            <a href="">Về chúng tôi</a>
+                        </li>
+                        <li class="header--menu__item">
+                            <a href="">Lĩnh vực hoạt động</a>
+                        </li>
+                        <li class="header--menu__item">
+                            <a href="">Sản phẩm</a>
+                        </li>
+                        <li class="header--menu__item">
+                            <a href="">Phát triển bền vững</a>
+                        </li>
+                        <li class="header--menu__item">
+                            <a href="">Tin tức</a>
+                        </li>
+                        <li class="header--menu__item">
+                            <a href="">Liên hệ</a>
+                        </li>
+                        <li class="header--control">
+                <div class="control--languge">
+                  <span>Vn</span>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20.1929 8.71298C20.1361 8.57594 20.04 8.45881 19.9167 8.3764C19.7933 8.29399 19.6483 8.25 19.5 8.25H4.5C4.35167 8.25 4.20666 8.29399 4.08332 8.3764C3.95998 8.45881 3.86385 8.57595 3.80709 8.713C3.75032 8.85004 3.73547 9.00084 3.76441 9.14633C3.79336 9.29182 3.86479 9.42546 3.96968 9.53034L11.4697 17.0303C11.5393 17.1 11.622 17.1552 11.713 17.1929C11.804 17.2306 11.9015 17.25 12 17.25C12.0985 17.25 12.196 17.2306 12.287 17.1929C12.378 17.1552 12.4607 17.1 12.5303 17.0303L20.0303 9.53034C20.1352 9.42545 20.2066 9.29181 20.2356 9.14632C20.2645 9.00084 20.2497 8.85003 20.1929 8.71298Z"
+                    />
+                  </svg>
+                  <div class="language-dropdown">
+                    <a href="#">EN</a>
+                  </div>
+                </div>
+                <div class="control--search">
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 15 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.5 14.5L10.5 10.5M6.5 12.5C3.18629 12.5 0.5 9.81371 0.5 6.5C0.5 3.18629 3.18629 0.5 6.5 0.5C9.81371 0.5 12.5 3.18629 12.5 6.5C12.5 9.81371 9.81371 12.5 6.5 12.5Z"
+                    />
+                  </svg>
+                </div>
+
+                <div class="search-overlay">
+                  <button class="search-close-btn">X</button>
+                  <div class="search-container">
+                    <input
+                      type="text"
+                      class="search-input"
+                      placeholder="Bạn muốn tìm kiếm gì..."
+                    />
+
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 15 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="search-bar-icon"
+                    >
+                      <path
+                        d="M14.5 14.5L10.5 10.5M6.5 12.5C3.18629 12.5 0.5 9.81371 0.5 6.5C0.5 3.18629 3.18629 0.5 6.5 0.5C9.81371 0.5 12.5 3.18629 12.5 6.5C12.5 9.81371 9.81371 12.5 6.5 12.5Z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="menu--bar">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.75 12H20.25"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.75 6H20.25"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3.75 18H20.25"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  <!--  -->
+                  <div class="left"></div>
+                  <div class="top"></div>
+                  <div class="right"></div>
+                  <div class="bottom"></div>
+                </div>
+              </li>                   
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <ul class="mobile-menu__list">
+                <li class="mobile-menu__item">
+                    <a href="">Trang chủ</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="">Về chúng tôi</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="">Lĩnh vực hoạt động</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="">Sản phẩm</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="">Phát triển bền vững</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="">Tin tức</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="">Liên hệ</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+     <section class="banner">
+      <div class="container-fruid">
+        <div class="block--banner">
+          <!-- bg-topbanner -->
+          <div class="bg--bannerTop"></div>
+          <div class="list--banner"></div>
+
+          <div class="container--banner custom--containerListControl">
+            <ul class="list--control"></ul>
+          </div>
+          <div class="container--banner custom--containerPrevNext">
+            <div class="control--banner">
+              <div class="block--btn__next">
+                <div class="btn--arrow bgRgbBlack btn--next">
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 15 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M10 14L3 7.5L10 1" stroke-linecap="square" />
+                  </svg>
+                </div>
+              </div>
+              <div class="block--btn__prev">
+                <div class="btn--arrow bgRgbBlack btn--prev">
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 15 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M5 14L12 7.5L5 1" stroke-linecap="square" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+        </div>
+      </div>
+    </section>
+
+    <ul class="side-toolbar">
+        <div id="backToTopBtn" class="side-toolbar__item gray">
+            <a href="">
+                <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                    d="M12 21.7503V6.75034"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    />
+                    <path
+                    d="M5.25 13.5004L12 6.75037L18.75 13.5004"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    />
+                    <path
+                    d="M4.5 3.75034H19.5"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    />
+                </svg>
+            </a>
+        </div>
+        <div class="side-toolbar__item gray">
+            <a href="">
+                <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <g id="Iconly/Light/Edit Square">
+                    <g id="Edit Square">
+                        <path
+                        id="Stroke 1"
+                        d="M11.4923 2.78906H7.7533C4.6783 2.78906 2.75031 4.96606 2.75031 8.04806V16.3621C2.75031 19.4441 4.6693 21.6211 7.7533 21.6211H16.5773C19.6623 21.6211 21.5813 19.4441 21.5813 16.3621V12.3341"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        />
+                        <path
+                        id="Stroke 3"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M8.82782 10.921L16.3008 3.44799C17.2318 2.51799 18.7408 2.51799 19.6718 3.44799L20.8888 4.66499C21.8198 5.59599 21.8198 7.10599 20.8888 8.03599L13.3798 15.545C12.9728 15.952 12.4208 16.181 11.8448 16.181H8.09882L8.19282 12.401C8.20682 11.845 8.43382 11.315 8.82782 10.921Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        />
+                        <path
+                        id="Stroke 5"
+                        d="M15.1652 4.60254L19.7312 9.16854"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        />
+                    </g>
+                    </g>
+                </svg>
+            </a>
+        </div>
+        <div class="side-toolbar__item red">
+            <a href="">
+                <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <g id="Iconly/Light/Call">
+                    <g id="Call">
+                        <path
+                        id="Stroke 1"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M11.5317 12.4724C15.5208 16.4604 16.4258 11.8467 18.9656 14.3848C21.4143 16.8328 22.8216 17.3232 19.7192 20.4247C19.3306 20.737 16.8616 24.4943 8.1846 15.8197C-0.493478 7.144 3.26158 4.67244 3.57397 4.28395C6.68387 1.17385 7.16586 2.58938 9.61449 5.03733C12.1544 7.5765 7.54266 8.48441 11.5317 12.4724Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        />
+                    </g>
+                    </g>
+                </svg>
+            </a>
+        </div>
+    </ul>
+    <main class="main">
+        <div class="container-fruid">
+            <section class="introduce">
+                <div class="introduce__img">
+                    <img src="./asset/img/mercury.png" alt="">
+                </div>
+                <div class="info">
+                    <div class="slogan">
+                        <img src="https://mercurychemical.com/wp-content/uploads/2024/10/4.svg" alt="slogan">
+                    </div>
+                    <p class="content">
+                        Các cổ đông của Mercury Chemical là những nhà hóa học dày dặn kinh
+                        nghiệm, tích lũy qua nhiều năm làm việc tại Việt Nam và các quốc
+                        gia châu Á. Sự kết hợp giữa kiến thức chuyên môn từ các tập đoàn
+                        quốc tế và hiểu biết sâu sắc về thị trường địa phương giúp doanh
+                        nghiệp đáp ứng tốt các yêu cầu của các đối tác đa quốc gia.
+                    </p>
+                    <div class="blockBtn-conentArrow btn__introduce">
+                        <span style="margin: 2px ;"> Về chúng tôi</span>
+                        <div class="btn--arrow bdRed">
+                            <svg
+                            width="15"
+                            height="15"
+                            viewBox="0 0 15 15"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            >
+                            <path d="M5 14L12 7.5L5 1" stroke-linecap="square" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="application bg--section">
+                <h2 class="title--font48 text--center">Ứng dụng</h2>
+
+                <ul class="list--application">
+                    <li class="list--application__items">
+                        <div class="application--img">
+                            <img src="./asset/img/pinlitium.png" alt="">
+                        </div>
+
+                        <div class="grid--content">
+                            <div class="block--title">
+                                <span>Pin Lithium</span>
+                            </div>
+
+                            <div class="block--contenBtn">
+                                <p class="content">
+                                    Mặc dù đã đạt được những tiến bộ vượt bậc trong lĩnh vực lưu trữ năng lượng bằng pin lithium-ion,
+                                     nhiều thách thức vẫn còn tồn tại đối với hệ thống pin, bao gồm: mật độ năng lượng,
+                                      tối ưu hóa chi phí, cải thiện hiệu suất an toàn và kéo dài tuổi thọ.
+                                       Nhằm giải quyết những thách thức này, dòng sản phẩm TUBALL™ BATT của nhà sản xuất OCSIAl ứng dụng công nghệ graphene nanotube là
+                                        giải pháp đột phá giúp nâng cao hiệu suất pin lithium-ion . Sản phẩm tiên tiến này góp phần cải thiện đáng kể 
+                                        các thông số của pin lithium-ion như mật độ năng lượng, tốc độ sạc, tuổi thọ và chi phí.
+                                </p>
+                                <div class="alignCenter mr--btnApplication">
+                                    <div class="btn--arrow bdWhite btn--application">
+                                        <svg
+                                        width="15"
+                                        height="15"
+                                        viewBox="0 0 15 15"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path d="M5 14L12 7.5L5 1" stroke-linecap="square" />
+                                    </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list--application__items">
+                        <div class="application--img">
+                            <img src="./asset/img/oto.png" alt="">
+                        </div>
+                        <div class="grid--content">
+                            <div class="block--title">
+                                <span>Ô tô</span>
+                            </div>
+                            <div class="block--contenBtn">
+                                <p class="content">
+                                    Ngành sơn ô tô/ xe máy đang chuyển đổi mạnh mẽ sang các loại sơn thân thiện với môi trường,
+                                     với sơn gốc nước dần thay thế sơn gốc dung môi. Các dòng phụ gia tiên tiến cho sơn ô tô đang ngày càng được ưa chuộng,
+                                      đáp ứng nhu cầu về các loại sơn thân thiện với môi trường tại Việt Nam. Các dòng nguyên vật liệu tiên tiến giúp giảm lượng VOC,
+                                       hỗ trợ phát triển sơn gốc nước, sơn có hàm lượng chất rắn cao và sơn không dung môi.
+                                        Những phụ gia này không chỉ thay thế cho các loại sơn gốc dung môi truyền thống mà còn tối ưu hóa công thức sơn và quy
+                                         trình ứng dụng để cải thiện hiệu suất, bảo vệ môi trường và giảm chi phí.
+                                </p>
+                                <div class="alignCenter mr--btnApplication">
+                                    <div class="btn--arrow bdWhite btn--application">
+                                        <svg
+                                        width="15"
+                                        height="15"
+                                        viewBox="0 0 15 15"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path d="M5 14L12 7.5L5 1" stroke-linecap="square" />
+                                    </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list--application__items">
+                        <div class="application--img">
+                            <img src="./asset/img/nhuakythuat.png" alt="">
+                        </div>
+                        <div class="grid--content">
+                            <div class="block--title">
+                                <span>Nhựa kỹ thuật</span>
+                            </div>
+                            <div class="block--contenBtn">
+                                <p class="content">
+                                    Giải pháp và nguyên liệu nhựa kỹ thuật Polyamide 11
+                                </p>
+                                <div class="alignCenter mr--btnApplication">
+                                    <div class="btn--arrow bdWhite btn--application">
+                                        <svg
+                                        width="15"
+                                        height="15"
+                                        viewBox="0 0 15 15"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path d="M5 14L12 7.5L5 1" stroke-linecap="square" />
+                                    </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list--application__items">
+                        <div class="application--img">
+                            <img src="./asset/img/capdien.png" alt="">
+                        </div>
+                        <div class="grid--content">
+                            <div class="block--title">
+                                <span>Cáp điện</span>
+                            </div>
+                            <div class="block--contenBtn">
+                                <p class="content">
+                                   Các nhà sản xuất cáp hiện nay đang phải đối mặt với các yêu cầu mới về an toàn (kháng lửa),
+                                    độ bền (ổn định) và độ bền lâu dài (độ bền cơ học).
+                                     Các sản phẩm của chúng tôi cung cấp các giải pháp phù hợp cho những vấn đề này và được sử dụng để sản xuất cáp điện áp thấp,
+                                      trung, cao và cực cao. Với danh mục đa dạng và tính ứng dụng rộng rãi, 
+                                      sản phẩm của chúng tôi có thể ứng dụng vào hầu như tất cả các loại cáp điện đồng thời đáp ứng các tiêu chuẩn kỹ thuật quốc tế
+                                       (AS/CA, ANSI/TIA, ISO & IEEE).
+                                </p>
+                                <div class="alignCenter mr--btnApplication">
+                                    <div class="btn--arrow bdWhite btn--application">
+                                        <svg
+                                        width="15"
+                                        height="15"
+                                        viewBox="0 0 15 15"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path d="M5 14L12 7.5L5 1" stroke-linecap="square" />
+                                    </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list--application__items">
+                        <div class="application--img">
+                            <img src="./asset/img/tayruacongnghiep.png" alt="">
+                        </div>
+                        <div class="grid--content">
+                            <div class="block--title">
+                                <span>Tẩy rửa công nghiệp</span>
+                            </div>
+                            <div class="block--contenBtn">
+                                <p class="content">
+                                    Danh mục hóa chất phong phú và chuyên môn sâu giúp nâng cao hiệu suất làm sạch và an toàn trong môi trường công nghiệp
+                                </p>
+                                <div class="alignCenter mr--btnApplication">
+                                    <div class="btn--arrow bdWhite btn--application">
+                                        <svg
+                                        width="15"
+                                        height="15"
+                                        viewBox="0 0 15 15"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path d="M5 14L12 7.5L5 1" stroke-linecap="square" />
+                                    </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list--application__items">
+                        <div class="application--img">
+                            <img src="./asset/img/baotay.png" alt="">
+                        </div>
+                        <div class="grid--content">
+                            <div class="block--title">
+                                <span>Găng tay</span>
+                            </div>
+                            <div class="block--contenBtn">
+                                <p class="content">
+                                    
+                                </p>
+                                <div class="alignCenter mr--btnApplication">
+                                    <div class="btn--arrow bdWhite btn--application">
+                                        <svg
+                                        width="15"
+                                        height="15"
+                                        viewBox="0 0 15 15"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path d="M5 14L12 7.5L5 1" stroke-linecap="square" />
+                                    </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="line--slider">
+                    <div class="line--slider__line"></div>
+
+                    <div class="line--slider">
+                        <svg
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path d="M10 14L3 7.5L10 1" stroke-linecap="square" />
+                    </svg>
+
+                    <div class="animate--pointer">
+                        <svg
+                        class="animate--pointer__pointer"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <path
+                            d="M11.9999 9.75V3.375C11.9999 2.87772 11.8023 2.40081 11.4507 2.04917C11.0991 1.69754 10.6221 1.5 10.1249 1.5C9.62759 1.5 9.15067 1.69754 8.79904 2.04917C8.44741 2.40081 8.24987 2.87772 8.24987 3.375V14.7437L6.19416 11.1831C6.07116 10.9697 5.9073 10.7825 5.71194 10.6324C5.51658 10.4823 5.29356 10.3722 5.05562 10.3083C4.81768 10.2445 4.56949 10.2281 4.32523 10.2602C4.08097 10.2923 3.84543 10.3723 3.63208 10.4955C3.41873 10.6186 3.23174 10.7827 3.0818 10.9781C2.93187 11.1736 2.82193 11.3967 2.75827 11.6347C2.6946 11.8727 2.67847 12.1209 2.71077 12.3652C2.74308 12.6094 2.82321 12.8449 2.94657 13.0581C5.99987 19.5 7.85773 21.75 11.9999 21.75C12.9848 21.75 13.9601 21.556 14.87 21.1791C15.7799 20.8022 16.6067 20.2497 17.3032 19.5533C17.9996 18.8569 18.5521 18.0301 18.929 17.1201C19.3059 16.2102 19.4999 15.2349 19.4999 14.25V10.5C19.4999 10.0027 19.3023 9.52581 18.9507 9.17417C18.5991 8.82254 18.1221 8.625 17.6249 8.625C17.1276 8.625 16.6507 8.82254 16.299 9.17417C15.9474 9.52581 15.7499 10.0027 15.7499 10.5"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M15.75 10.5V9.375C15.75 8.87772 15.5525 8.40081 15.2008 8.04917C14.8492 7.69754 14.3723 7.5 13.875 7.5C13.3777 7.5 12.9008 7.69754 12.5492 8.04917C12.1975 8.40081 12 8.87772 12 9.375V9.75"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        </svg>
+                    </div>
+                    <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 15 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path d="M5 14L12 7.5L5 1" stroke-linecap="square" />
+                    </svg>
+                    </div>
+                </div>
+
+                <div class="alignCenter mr--btnApplication">
+                    <div class="blockBtn-conentArrow btn__introduce">
+                        <span>XEM THÊM</span>
+                        <div class="btn--arrow bdRed">
+                            <svg
+                            width="15"
+                            height="15"
+                            viewBox="0 0 15 15"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            >
+                            <path d="M5 14L12 7.5L5 1" stroke-linecap="square" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section--officeLocation mr--section">
+          <div class="container">
+            <h2 class="title--font48 text--center">Vị trí văn phòng</h2>
+            <!-- block polygon -->
+            <div class="alignCenter">
+              <div class="block--polygon">
+                <!--  -->
+                <div style="--position: 1" class="block--polygon__item">
+                  <div class="polygon--img style--polygonImg">
+                    <img
+                      src="https://mercurychemical.com/wp-content/uploads/2024/10/VT-6.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="polygon--info">
+                    <h3 class="polygon--info__title">12km - 30 phút</h3>
+                    <p class="polygon--info__content">
+                      Sân bay Quốc tế Tân Sơn Nhất
+                    </p>
+                  </div>
+                </div>
+                <div style="--position: 2" class="block--polygon__item">
+                  <div class="polygon--img style--polygonImg">
+                    <img
+                      src="https://mercurychemical.com/wp-content/uploads/2024/10/VT-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="polygon--info">
+                    <h3 class="polygon--info__title">50km - 45 phút</h3>
+                    <p class="polygon--info__content">
+                      Cảng biển Cái Mép
+                    </p>
+                  </div>
+                </div>
+                <div style="--position: 3" class="block--polygon__item">
+                  <div class="polygon--img style--polygonImg">
+                    <img
+                      src="https://mercurychemical.com/wp-content/uploads/2024/10/VT-2.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="polygon--info">
+                    <h3 class="polygon--info__title">6km - 15 phút</h3>
+                    <p class="polygon--info__content">Quận kinh doanh trung tâm</p>
+                  </div>
+                </div>
+                <div
+                  style="--position: 4"
+                  class="block--polygon__item orderContentLeft"
+                >
+                  <div class="polygon--img style--polygonImg">
+                    <img
+                      src="https://mercurychemical.com/wp-content/uploads/2024/10/VT-3.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="polygon--info">
+                    <h3 class="polygon--info__title">1km - 5 phút</h3>
+                    <p class="polygon--info__content">
+                      Vị trí văn phòng mới
+                    </p>
+                  </div>
+                </div>
+                <div
+                  style="--position: 5"
+                  class="block--polygon__item orderContentLeft"
+                >
+                  <div class="polygon--img style--polygonImg">
+                    <img
+                      src="https://mercurychemical.com/wp-content/uploads/2024/10/VT-5.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="polygon--info">
+                    <h3 class="polygon--info__title">12km - 30 phút</h3>
+                    <p class="polygon--info__content">
+                      Cảng Quốc tế Cát Lái
+                    </p>
+                  </div>
+                </div>
+                <div
+                  style="--position: 6"
+                  class="block--polygon__item orderContentLeft"
+                >
+                  <div class="polygon--img style--polygonImg">
+                    <img
+                      src="https://mercurychemical.com/wp-content/uploads/2024/10/VT-4.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="polygon--info">
+                    <h3 class="polygon--info__title">35km - 35 phút</h3>
+                    <p class="polygon--info__content">
+                      Sân bay Quốc tế Long Thành mới
+                    </p>
+                  </div>
+                </div>
+
+                <div class="polygon--blockMobile">
+                  <div class="polygon">
+                    <!--  -->
+                    <div
+                      style="--rotate: 90deg"
+                      class="polygon__lineDashed"
+                    ></div>
+                    <div
+                      style="--rotate: 150deg"
+                      class="polygon__lineDashed"
+                    ></div>
+                    <div
+                      style="--rotate: 390deg"
+                      class="polygon__lineDashed"
+                    ></div>
+                    <!--  -->
+
+                    <!--  -->
+                    <div class="polygon--bg">
+                      <div class="polygon--bg__img style--polygonImg">
+                        <img
+                          src="https://mercurychemical.com/wp-content/uploads/2024/10/gioi-thieu.jpg"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--  -->
+              </div>
+            </div>
+          </div>
+        </section>
+            <section class="section--facilities bg--section mr--section">
+                <div class="container">
+                    <div class="facilities">
+
+                        <div class="facilities__info">
+                            <h2 class="title--font48">
+                                Cơ sở vật chất <br />
+                                (Văn phòng, Kho hàng)
+                            </h2>
+                            <p class="facilities__content">
+                                Hệ thống văn phòng và kho bãi của Mercury được đặt tại các địa
+                                điểm chiến lược, đảm bảo sự thuận lợi cho quá trình vận chuyển
+                                và các hoạt động kinh doanh. Vị trí này không chỉ giúp tối ưu
+                                hóa quy trình hậu cần mà còn mang lại lợi thế trong việc mở
+                                rộng mối quan hệ kinh doanh, đảm bảo rằng khách hàng luôn nhận
+                                được sự hỗ trợ kịp thời và hiệu quả. Sự đầu tư vào cơ sở vật
+                                chất hiện đại không chỉ cải thiện năng suất hoạt động mà còn
+                                là cam kết về việc mang lại chất lượng dịch vụ vượt trội cho
+                                khách hàng, góp phần thúc đẩy sự phát triển của doanh nghiệp
+                                và đối tác trong một môi trường kinh doanh ngày càng cạnh
+                                tranh.
+                            </p>
+                        </div>
+                        <div class="facilities__img">
+                            <img src="https://baobui1206.github.io/cloneWeb/asset/images/img-VietNam.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section--news mr--section">
+                <div class="container">
+                    <div class="news">
+                        <h2 class="title--font48 text--center">Tin tức nổi bật</h2>
+
+                        <div class="list--news">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <article class="list--news__item">
+
+                                            <div class="news--thumnail">
+                                                <a href="">
+                                                    <img src="https://mercurychemical.com/wp-content/uploads/2024/11/Picture1-1.png" alt="">
+                                                </a>
+                                            </div>
+
+                                            <div class="news--info">
+                                                <div class="news--time">
+                                                    <svg
+                                                    class="news--time__icon"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke-width="1.5"
+                                                    stroke="currentColor"
+                                                    class="size-6"
+                                                    >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                                                    />
+                                                    </svg>
+                                                    <span class="news--time__content">08/11/2024</span>
+                                                </div>
+                                                <h3 class="news--info__name">
+                                                    <a href="">Sàn Epoxy chống tĩnh điện là gì?</a>
+                                                </h3>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="list--news__item">
+
+                                            <div class="news--thumnail">
+                                                <a href="">
+                                                    <img src="https://mercurychemical.com/wp-content/uploads/2025/07/TEGO-THERM-1-1024x498.jpg" alt="">
+                                                </a>
+                                            </div>
+
+                                            <div class="news--info">
+                                                <div class="news--time">
+                                                    <svg
+                                                    class="news--time__icon"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke-width="1.5"
+                                                    stroke="currentColor"
+                                                    class="size-6"
+                                                    >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                                                    />
+                                                    </svg>
+                                                    <span class="news--time__content">25/07/2025</span>
+                                                </div>
+                                                <h3 class="news--info__name">
+                                                    <a href="">Sơn chịu nhiệt: Khái niệm và giải pháp</a>
+                                                </h3>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="list--news__item">
+
+                                            <div class="news--thumnail">
+                                                <a href="">
+                                                    <img src="https://mercurychemical.com/wp-content/uploads/2024/10/Picture1-2.jpg" alt="">
+                                                </a>
+                                            </div>
+
+                                            <div class="news--info">
+                                                <div class="news--time">
+                                                    <svg
+                                                    class="news--time__icon"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke-width="1.5"
+                                                    stroke="currentColor"
+                                                    class="size-6"
+                                                    >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                                                    />
+                                                    </svg>
+                                                    <span class="news--time__content">09/10/2024</span>
+                                                </div>
+                                                <h3 class="news--info__name">
+                                                    <a href="">Chất phá bọt cho sơn và lớp phủ</a>
+                                                </h3>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="list--news__item">
+
+                                            <div class="news--thumnail">
+                                                <a href="">
+                                                    <img src="https://mercurychemical.com/wp-content/uploads/2025/08/esd-film.jpeg" alt="">
+                                                </a>
+                                            </div>
+
+                                            <div class="news--info">
+                                                <div class="news--time">
+                                                    <svg
+                                                    class="news--time__icon"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    stroke-width="1.5"
+                                                    stroke="currentColor"
+                                                    class="size-6"
+                                                    >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                                                    />
+                                                    </svg>
+                                                    <span class="news--time__content">27/08/2025</span>
+                                                </div>
+                                                <h3 class="news--info__name">
+                                                    <a href="">Màng phim chống tĩnh điện (ESD film) trong công nghiệp điện tử</a>
+                                                </h3>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+
+                            <div class="block--btn__prev">
+                                <div class="btn--arrow bgRgbBlack news--prev">
+                                    <svg
+                                    width="15"
+                                    height="15"
+                                    viewBox="0 0 15 15"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                    <path d="M5 14L12 7.5L5 1" stroke-linecap="square" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="block--btn__next">
+                                <div class="btn--arrow bgRgbBlack news--next">
+                                    <svg
+                                    width="15"
+                                    height="15"
+                                    viewBox="0 0 15 15"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                    <path d="M10 14L3 7.5L10 1" stroke-linecap="square" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alignCenter mr--btnListNews">
+                            <div class="blockBtn-conentArrow btn__introduce">
+                                <span>Xem thêm</span>
+                                <div class="btn--arrow bdRed">
+                                   <svg
+                                    width="15"
+                                    height="15"
+                                    viewBox="0 0 15 15"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                    <path d="M5 14L12 7.5L5 1" stroke-linecap="square" />
+                                    </svg> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section--bannerFooter mr--section">
+                <div class="container-xl">
+                    <div class="banner--footer">
+                            <div class="banner--img">
+                                <img src="https://mercurychemical.com/wp-content/uploads/2024/10/7.png" alt="">
+                            </div>
+                            <div class="container custom--containerBannerFooter">
+                            <div class="content--banner">
+                                <h2 class="content--banner__title">Hóa học cho một thế giới tốt đẹp hơn</h2>
+                                <p class="content--banner__mainContent">
+                                    Công ty TNHH Hóa Chất Mercury, với sứ mệnh "Hóa học cho một
+                                    thế giới tốt đẹp hơn," không ngừng nỗ lực phát triển các
+                                    giải pháp bền vững và thân thiện với môi trường. Chúng tôi,
+                                    cùng với các đối tác toàn cầu, cam kết thực hiện các mục
+                                    tiêu chính sau để thúc đẩy sự phát triển bền vững
+                                    </p>
+                                <div class="blockBtn-conentArrow content--banner__btn">
+                                    <span>Xem thêm</span>
+                                    <div class="btn--arrow bdRed">
+                                        <svg
+                                        width="15"
+                                        height="15"
+                                        viewBox="0 0 15 15"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path d="M5 14L12 7.5L5 1" stroke-linecap="square" />
+                                    </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer mr--section">
+        <div class="iconBackgroundfooter"></div>
+        <div class="container">
+            <div class="endow">
+                <div class="endow__left">
+                    <h2 class="endow__title">
+                        Cập nhật tin tức, sự kiện mới nhất từ<br/>
+                        Mecury Chemical!
+                    </h2>
+                </div>
+                <div class="endow__right">
+                    <p class="endow__content">
+                        Vui lòng nhập email của bạn để nhận được những tin tức, sự kiện, ưu đãi mới nhất từ Mecury Chemical!
+                    </p>
+                    <form class="endow--form">
+                        <input type="text" class="endow--form__inp" placeholder="Nhập Email">
+                        <div class="btn--arrow bdWhite endow--form__submit">
+                            <svg
+                            width="15"
+                            height="15"
+                            viewBox="0 0 15 15"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            >
+                            <path d="M5 14L12 7.5L5 1" stroke-linecap="square" />
+                            </svg>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+
+            <div class="bottom--footer">
+                <ul class="list--content">
+                    <li class="list--content__item">
+                        <div>
+                            <div class="footer--logo">
+                                <a href="">
+                                    <img src="https://mercurychemical.com/wp-content/uploads/2024/10/logo-mercury.svg" alt="">
+                                </a>
+                            </div>
+
+                            <div class="footer--social">
+                                <svg
+                                width="15"
+                                height="15"
+                                viewBox="0 0 15 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                d="M7.5 14.5C3.63401 14.5 0.5 11.366 0.5 7.5C0.5 3.63401 3.63401 0.5 7.5 0.5C11.366 0.5 14.5 3.63401 14.5 7.5C14.5 11.366 11.366 14.5 7.5 14.5ZM7.5 14.5V6.5C7.5 5.39543 8.39543 4.5 9.5 4.5H10M5 8.5H10"
+                                />
+                            </svg>
+                            <svg
+                                width="15"
+                                height="15"
+                                viewBox="0 0 15 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                d="M0.5 11.3639V3.63609C0.5 2.97342 0.962914 2.40081 1.61087 2.26196C5.49289 1.4301 9.50711 1.4301 13.3891 2.26196C14.0371 2.40081 14.5 2.97342 14.5 3.63609V11.3639C14.5 12.0266 14.0371 12.5992 13.3891 12.738C9.50711 13.5699 5.49289 13.5699 1.61087 12.738C0.962915 12.5992 0.5 12.0266 0.5 11.3639Z"
+                                stroke-linejoin="round"
+                                />
+                                <path
+                                d="M6.5 9.5V5.5L9.5 7.5L6.5 9.5Z"
+                                stroke-linejoin="round"
+                                />
+                            </svg>
+                            <svg
+                                width="15"
+                                height="15"
+                                viewBox="0 0 15 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                d="M11 3.5H12M4.5 0.5H10.5C12.7091 0.5 14.5 2.29086 14.5 4.5V10.5C14.5 12.7091 12.7091 14.5 10.5 14.5H4.5C2.29086 14.5 0.5 12.7091 0.5 10.5V4.5C0.5 2.29086 2.29086 0.5 4.5 0.5ZM7.5 10.5C5.84315 10.5 4.5 9.15685 4.5 7.5C4.5 5.84315 5.84315 4.5 7.5 4.5C9.15685 4.5 10.5 5.84315 10.5 7.5C10.5 9.15685 9.15685 10.5 7.5 10.5Z"
+                                />
+                            </svg>
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                d="M19.5 3.75H4.5C4.08579 3.75 3.75 4.08579 3.75 4.5V19.5C3.75 19.9142 4.08579 20.25 4.5 20.25H19.5C19.9142 20.25 20.25 19.9142 20.25 19.5V4.5C20.25 4.08579 19.9142 3.75 19.5 3.75Z"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                />
+                                <path
+                                d="M11.25 10.5001V16.5001"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                />
+                                <path
+                                d="M8.25 10.5001V16.5001"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                />
+                                <path
+                                d="M8.25 8.34384C8.71599 8.34384 9.09375 7.96608 9.09375 7.50009C9.09375 7.0341 8.71599 6.65634 8.25 6.65634C7.78401 6.65634 7.40625 7.0341 7.40625 7.50009C7.40625 7.96608 7.78401 8.34384 8.25 8.34384Z"
+                                fill="#292929"
+                                />
+                                <path
+                                d="M11.25 13.1251C11.25 12.4289 11.5266 11.7612 12.0188 11.2689C12.5111 10.7767 13.1788 10.5001 13.875 10.5001C14.5712 10.5001 15.2389 10.7767 15.7312 11.2689C16.2234 11.7612 16.5 12.4289 16.5 13.1251V16.5001"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                />
+                            </svg>
+                            </div>
+                        </div>
+                        <p class="footer--copyright">
+                            © 2024 Mercury Chemical. All Rights Reserved. Thiết kế web bởi
+                            Cánh Cam.
+                        </p>
+                    </li>
+
+                    <li class="list--content__item">
+                        <h3 class="title--contentFooter">
+                           Công ty TNHH hóa chất Mercury
+                        </h3>
+                        <p class="footer--address">
+                            Tháp A2.00.02, 74 Nguyễn Cơ Thạch, Khu đô thị Sala, P. An Lợi
+                            Đông, TP. Thủ Đức, TP. Hồ Chí Minh
+                        </p>
+                        <a href="" class="footer--linkMap">Xem tren Google Map</a>
+                        <h3 class="title--contentFooter mrTitleContent2">
+                            Liên hệ với chúng tôi
+                        </h3>
+                        <ul class="list--content2">
+                            <li class="list--content2__item">
+                                <span class="title--text">Hotline: </span>
+                                <a href="">+(84) 28 22211999</a>
+                            </li>
+                            <li class="list--content2__item">
+                                <span class="title--text">Email: </span>
+                                info@mercurychemical.com
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list--content__item">
+                        <h3 class="title--contentFooter">Về Mercury Chemical</h3>
+                        <ul class="menu--linkFooter__item">
+                            <li class="menu--linkFooter__item">
+                                <a href="">Về chúng tôi</a>
+                            </li>
+                            <li class="menu--linkFooter__item">
+                                <a href="">Ý nghĩa thương hiệu</a>
+                            </li>
+                            <li class="menu--linkFooter__item">
+                                <a href="">Tầm nhìn - sứ mệnh</a>
+                            </li>
+                            <li class="menu--linkFooter__item">
+                                <a href="">Vị trí văn phòng</a>
+                            </li>
+                            <li class="menu--linkFooter__item">
+                                <a href="">Cơ sở vật chất</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list--content__item">
+                        <h3 class="title--contentFooter">Liên kết nhanh</h3>
+                        <ul class="menu--linkFooter">
+                            <li class="menu--linkFooter__item">
+                                <a href="">Lĩnh vực hoạt động</a>
+                            </li>
+                            <li class="menu--linkFooter__item">
+                                <a href="">Sản phẩm</a>
+                            </li>
+                            <li class="menu--linkFooter__item">
+                                <a href="">Phát triển bền vững</a>
+                            </li>
+                            <li class="menu--linkFooter__item">
+                                <a href="">Tin tức</a>
+                            </li>
+                            <li class="menu--linkFooter__item">
+                                <a href="">Liên hệ</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div class="search-overlay">
+        <div class="search-overlay__close">
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+            >
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+            />
+            </svg>
+        </div>
+        <div class="search-overlay__content">
+            <input type="text" placeholder="Search...">
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./asset/mainjs/main.js"></script>
+</body>
+</html>

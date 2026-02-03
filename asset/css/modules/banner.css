@@ -1,0 +1,211 @@
+.banner .block--banner {
+  position: relative; /* Làm gốc tọa độ cho các phần tử con tuyệt đối */
+}
+.banner .block--banner .list--banner {
+  position: relative;
+  overflow: hidden;/* an cac phan tu thua ngoai khung */
+   clip-path: polygon(0 0, 100% 0, 100% 92%, 50% 100%, 0 92%);/*Tao hinh khoi dac biet (day nhon)*/
+}
+.banner .block--banner .list--banner::before {
+  content: "";/*Tao noi dung rong*/
+  display: block; /*bien no thanh mot khoi*/
+  width: 100%;  /*chieu rong phu het cha*/
+  padding-top: 56.25%;
+}
+.banner .block--banner .list--banner::after { /*Thay vì phải viết thêm một thẻ <div> trong HTML, CSS tạo ra một "lớp mặt nạ" ảo để xử lý đồ họa.*/
+  content: "";
+  position: absolute;/* Đặt vị trí tuyệt đối đè lên ảnh */
+  inset: 0; /*Phu kin toan bo khung banner*/
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 50% 100%, 0 92%);/*cat khung thanh hinh day nhon*/
+  background: white;/*mau lop phu*/
+  z-index: 2;/*nam tren cung de tao hieu ung che hinh anh*/
+}
+.banner .block--banner .list--banner__item { /*slide anh*/
+  position: absolute;/*xep chong cac slide len nhau*/
+  inset: 0; /*Gian tung slide phu kin toan bo khung chua anh*/
+  transition: all 0.4s linear;/*Tao hieu ung chuyen dong(0.4s) khi doi slide*/
+}
+.banner .block--banner .list--banner__item .banner--img { /*lop boc truc tiep cua tam anh trong slide*/
+  position: relative;/*Lam goc toa do cho cac lop phu (overlay) ben trong*/
+  height: 100%; /*Chieu cao phu kin slide (bang 100% khung cha)*/
+}
+.banner .block--banner .list--banner__item .banner--img img { /*hien thi hinh anh*/
+  width: 100%; /*Chieu rong phu het khung chua*/
+  height: 100%; /*chieu cao phu het khung chua*/
+  object-fit: cover; /*cat va lap day anh de khong bi meo*/
+}
+.banner .block--banner .list--banner__item .banner--img::after { /*lop phu toi giup chu noi bat hon tren anh*/
+  content: ""; /*Tao lop phu*/
+  position: absolute;/*De len tren tam anh*/
+  inset: 0;/*Phu kin toan bo tam anh*/
+  background: rgba(0, 0, 0, 0.3);/*Mau lop phu (0,0,0) voi do mo 30% (0.3)*/
+}
+.banner 
+  .block--banner
+  .list--banner__item
+  .container--banner.custom--containerContentBanner {/* can giua nd va nut bam*/
+  top: 50%;/*Day mep tren cua nd xuong giua khung (50% chieu cao)*/
+  transform: translate(-50%, -50%);/*Dich chuyen nguoc lai de tam cua nd trung voi tam cua khung*/
+}
+.banner .block--banner .list--banner__item .content--banner {/*Khung chua nd van ban tren banner*/
+  color: white;/*Mau chu*/
+  width: 60%;/*Gioi han do rong nd toi da 60% de khong bi tran het man hinh*/
+  font-weight: 700;/*Do dam cua chu (Bold)*/
+}
+.banner .block--banner .list--banner__item .content--banner__top {/*Dinh dang dong chu nho nam tren cung*/
+  font-size: 1.6rem; /*kich thuoc chu*/
+  text-transform: uppercase; /*Chuyen chu thanh in hoa*/
+  font-weight: 600; /*Do dam cua chu*/
+}
+.banner .block--banner .list--banner__item .content--banner__title {/*Dinh dang tieu de chinh (Tao dung mt lam viec ...)*/
+  margin-top: 12px;/*Khoang cach voi dong tieu de nho phia tren*/
+  font-size: 64px;/*Kich thuoc chu*/
+}
+.banner .block--banner .list--banner__item .content--banner__content {/*Dinh dang noi dung van ban mo ta phia duoi*/
+  margin-top: 12px; /*Khoang cach voi tieu de o tren*/
+  font-size: 2rem; /*kich thuoc chu*/
+  font-weight: 600;/*Do dam nhat cua chu*/
+  line-height: 1.4;/*Khoang cach giua cac dong chu*/
+
+  /*Gioi han van ban trong 3 dong*/
+  display: -webkit-box;/*Bat buoc de dung line-clamp*/
+  -webkit-line-clamp: 3; /*Gioi han toi da 3 dong*/
+  -webkit-box-orient: vertical;/*thiet lap huong hien thi khoi theo chieu doc*/
+  overflow: hidden;/*An phan chu du thua sau 3 dong*/
+  text-overflow: ellipsis;/*Hien thi 3 cham o cuoi doan neu qua dai*/
+  -o-text-overflow: ellipsis;
+}
+.banner .block--banner .list--banner__item .content--banner__seemore { /*Dinh dang cho nut xem them*/
+  --size-icon: 25px;/*Kich thuoc icon*/
+  --gap-icon: 10px;/*Khoang cach truot icon*/
+  display: flex;/*Xem chu va icon nam ngang hang*/
+  align-items: center;/*can giua chu va idon theo chieu doc*/ 
+  column-gap: 8px;/*Khoang cach giua chu va icon*/
+  padding: 10px 16px;/*Khoang cach dem ben trong nut*/
+  margin-top: 16px;/*Khoang cach phia tren nut*/
+  background: rgb(128, 22, 24); 
+  color: white;/*Mau chu*/
+  border: 1.5px solid transparent;
+  font-size: 1rem;/*kich thuoc chu*/
+  text-transform: uppercase;/*Viet in hoa toan bo chu*/
+  font-weight: 500;/*Do dam nhat*/
+  background: linear-gradient(rgb(128, 22, 24), rgb(128, 22, 24)) padding-box,/*mau nen*/
+    linear-gradient(45deg, rgb(159, 161, 163), rgb(255, 255, 255), rgb(203, 204, 205))/*Mau vien mau bach kim*/
+      border-box;
+  cursor: pointer;/*Doi con tro thanh hinh ban tay*/
+  transition: all 0.2s linear;/*Hieu ung chuyen mau muot ma khi hover*/
+}
+.banner
+  .block--banner
+  .list--banner__item
+  .content--banner__seemore:hover
+  .box--icon
+  .slide--icon { /*Hieu ung di chuyen icon*/
+  transform: translateX(calc(var(--size-icon) + var(--gap-icon)));/*Di chuyen cum icon sang phai mot khoang bang (kich thuoc icon + khoang cach trong)*/
+}
+.banner .block--banner .list--banner__item .content--banner__seemore:hover {/*Hieu ung doi mau nut khi hover*/
+  /*Thay doi mau tu do sang den, giu nguyen vien*/
+  background: linear-gradient(black, black) padding-box,
+    linear-gradient(
+        45deg,
+        rgb(159, 161, 163),
+        rgb(255, 255, 255),
+        rgb(203, 204, 205)
+      )
+      border-box;
+}
+.banner
+  .block--banner
+  .list--banner__item
+  .content--banner__seemore
+  .box--icon { /*Vo boc ben ngoai icon nhu mot cua so de tao hieu ung truot*/
+  position: relative;/*Lam goc toa do cho icon ben trong*/
+  width: var(--size-icon);/*Chieu rong bien da khai bao*/
+  height: var(--size-icon);/*Chieu cao bien da khai bao*/
+  overflow: hidden;/*An phan icon thua khi no truot ra ngoai khung*/
+}
+.banner
+  .block--banner
+  .list--banner__item
+  .content--banner__seemore
+  .box--icon
+  .slide--icon { /*lop chua icon ben trong, truc tiep thuc hien hanh dong truot khi di chuot vao nut*/
+  position: absolute;/*Dat vi tri tuyet doi trong khung boxx--icon*/
+  right: 0;/*can le phai de icon dau tien luon hien thi*/
+  display: flex;/*Xep cac icon (2 cai) nam hang ngang*/
+  column-gap: var(--gap-icon);/*khoang cach giua cac icon*/
+  transition: all 0.2s linear;/*Hieu ung truot muot ma trong 0.2s*/
+}
+.banner
+  .block--banner
+  .list--banner__item
+  .content--banner__seemore
+  .box--icon
+  .slide--icon
+  svg {/*Dinh dang cho bieu tuong icon svg*/
+  width: var(--size-icon);/*Chieu rong icon lau theo bien*/
+  height: var(--size-icon);/*Chieu cao icon lay theo bien*/
+  stroke: white;/*Doi mau icon thanh mau trang*/
+  stroke-width: 2px;/*Do day cua net ve icon la 2 pixel*/
+}
+.banner .block--banner .container--banner.custom--containerListControl {/*Xac dinh vi tri 4 thanh dieu huong ben duoi banner*/
+  bottom: 106px;/*cach mep banner 1 khoang = 106px*/
+}
+.banner .block--banner .list--control {/*bo cuc thanh dieu huong 4 cot*/
+  width: 100%;/*chieu rong phu het khung chua nd*/
+  display: grid;/*Su dung grid de chia cot*/
+  grid-template-columns: repeat(4, 1fr);/*Chia thanh 4 cot bang nhau, moi cot chiem 1 phan (1fr)*/
+  align-items: end;/*Can ca nd ben trong sat xuong day cua hang*/
+  column-gap: 16px;/*Khoang cach giua cac cot*/
+}
+.banner .block--banner .list--control__item {/*Dinh dang cho tung muc tieu de (VD: cam ket mang lai, ...*/
+  position: relative;/*Lam goc de dat thanh gach nang mau do(::after) phia ben duoi*/
+  height: max-content;/*Chieu cao tu dong om khit theo nd cua chu*/
+  display: block;/*Hien thi dang khoi de de can chinh*/
+  padding: 16px 0;/*Tao khoang cach dem tren va duoi de vung bam chuot rong hon*/
+  font-size: 1.8rem;/*Kich thuoc chu cua tieu de phu*/
+  color: white;/*Mau chu trang*/
+  cursor: pointer;/*Hien ban tay khi di chuot vao de bao hieu co the click*/
+}
+.banner .block--banner .list--control__item::after {/*Tao phan gach nang mo ben duoi moi muc dieu huong*/
+  content: "";/*Tao phan tu ao*/
+  position: absolute;/*Dat co dinh duoi day cua moi muc dieu huong*/
+  left: 0;/*Bat dau tu mep trai*/
+  bottom: 0;/*nam sat mep duoi*/
+  display: block;/*Hien thi nhu mot khoi chu nhat*/
+  width: 100%;/*Dai bang toan bo chieu rong cua cot (1fr)*/
+  height: 2px;/*Do day cua thanh gach ngang la 2px*/
+  background: hsla(0, 0%, 100%, 0.2);/*mau trang mo (dp trong suot la 20%)*/
+  border-radius: 9px;/*Bo tron 2 dau*/
+}
+.banner .block--banner .list--control__item.active::after {/*Doi mau thanh gach ngang ben duoi cho nd dang hien thi*/
+  background: rgb(235, 35, 41);
+}
+.banner .block--banner .list--control__item.active {
+  border-color: rgb(235, 35, 41);
+}
+.banner .block--banner .container--banner.custom--containerPrevNext {/*Dinh vi cum nut dieu huong(mui ten trai/phai)*/
+  left: 50%;/*Day cum nut sang giua theo chieu ngang*/
+  top: 50%;/*Day cum nut xuong giua theo chieu doc*/
+  transform: translateY(-50%, -50%);/*can giua*/
+}
+.banner .block--banner .control--banner { /*dinh vi 2 nut ve hai phia doi dien cua Banner*/
+  display: flex; /*Su dung flexbox de xep cac nut nam thanh hang ngang*/
+  justify-content: space-between;/*Day hai nut ra xa nhau (mot nut sat le trai, mot nut sat le phai)*/
+}
+.banner .block--banner .control--banner .block--btn__next,
+.banner .block--banner .control--banner .block--btn__prev {/*Co dinh vi tri cua hai nut mui ten luon nam giua chieu cao cua banner*/
+  position: absolute;/*Dat nut nam de len tren banner*/
+  top: 50%;/*Day nut xuong vi tri 50% chieu cao cua khung cha*/
+  transform: translateY(-50%);/*Dich chuyen nguoc lai 50% chieu cao cua chinh cai nut de no nam chinh giua*/
+}
+.banner .block--banner .control--banner .btn--next,
+.banner .block--banner .control--banner .btn--right {/*xoay khung hinh vuong mot goc 45 do*/
+  transform: rotate(45deg);
+}
+.banner .block--banner .control--banner .block--btn__next {/*xac dinh khoang cach cua 2 nut mui ten so voi khung*/
+  right: calc(100% + 4px);
+}
+.banner .block--banner .control--banner .block--btn__prev {
+  left: calc(100% + 4px);
+}

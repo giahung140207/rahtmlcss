@@ -1,0 +1,138 @@
+.footer {
+  position: relative;
+  background: rgb(128, 22, 24);
+  padding: 40px 0;/* Tạo khoảng trống 40px ở trên và dưới để nội dung không bị dính sát mép */
+}
+.footer .iconBackgroundfooter {
+  position: absolute;/*Dat icon nam de len tren hoac duoi nd cua footer*/
+  left: 0;/*Can sat le trai*/
+  top: 24px;/*cach mep tren cua footer 24px*/
+  /*Xu ly hinh anh*/
+  background-image: url("../images/iconBackgroundFooter.png");
+  background-repeat: no-repeat;/*Khong lap lai hinh anh*/
+  background-size: contain;/*Tu dong co gian anh de nam tron trong khung 300x300 */
+  /*kich thuoc vung hien thi*/
+  width: 300px;
+  height: 300px;
+}
+.footer .endow {/*phan nam ben trong footer*/
+  display: grid;
+  /*Chia lam 2 cot: cot trai chiem 7 phan, cot phai chiem 5 phan*/
+  grid-template-columns: 7fr 5fr;
+  align-items: center;/*can giua cac nd trong cot theo chieu doc*/
+  column-gap: 48px;/*Khoang cach giua hai cot la 48px, tao su thong thoang*/
+  padding-bottom: 40px;/*Khoang cach phia duoi de tach biet voi phan lien ket ben duoi*/
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+.footer .endow .endow__left .endow__title {/*Phan tieu de ben trai cua footer*/
+  font-size: 3.2rem;/*Kich thuoc chu*/
+  font-weight: 700;/*Do dam nhat*/
+  color: white;
+}
+.footer .endow .endow__right .endow__content {
+  font-size: 1.6rem;
+  color: white;
+  line-height: 1.38;
+}
+.footer .endow .endow__right .endow--form {/*phan form cua footer*/
+  display: flex;/*dua o nhap email va nut mui ten tren cung 1 hang*/
+  align-items: center;/*can giua o input va nut theo truc doc*/
+  column-gap: 16px;/*Tao khoang cach 16px giua o nhap lieu va nut bam*/
+  margin-top: 20px;/*Tao khoang cach voi doan van ban mo ta phia tren*/
+}
+.footer .endow .endow__right .endow--form__inp {/*khung nhap cua form*/
+  flex-grow: 1;/*Chiem toan bo khong gian trong con lai trong hang*/
+  height: 45px;/*chieu cao*/
+  border: none;/*bo khung vien mac dinh cua trinh duyet*/
+  outline: none;/*loai bo duong vien noi len khi nhan vao de go*/
+  padding: 0 12px;/*cach le trai/phai 12px*/
+  border-radius: 4px;/*bo goc*/
+}
+.footer .bottom--footer {/*phan ngan cach cua phan tren footer va phan duoi*/
+  padding-top: 6rem;/*tao khoang cach le tren la 6rem*/
+}
+.footer .bottom--footer .list--content {/*Cau truc phan chan trang*/
+  display: grid;
+  /*chia lam 4 cot*/
+  grid-template-columns: 3.5fr 4fr 2.5fr 2fr;
+  column-gap: 56px;/*Khoang cach giua cac cot*/
+  color: white;/*mau chu*/
+}
+.footer .bottom--footer .list--content__item:first-child {/*cot dau tien*/
+  display: flex;
+  flex-direction: column;/*Xep cac phan tu con theo chieu doc*/
+  justify-content: space-between;/*Day thanh phan dau len tren cung, thanh phan cuoi xuong duoi cung*/
+  height: 100%;
+}
+.footer .bottom--footer .list--content__item .title--contentFooter {/*phan tieu de moi cot*/
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.footer
+  .bottom--footer
+  .list--content__item
+  .title--contentFooter.mrTitleContent2 {/*Cot thu 2*/
+  margin-top: 32px;
+}
+.footer .bottom--footer .list--content__item .footer--logo img {/*phan logo*/
+  width: auto;/*Giu dung ti le cua logo*/
+  height: 60px;/*chieu cao*/
+}
+.footer .bottom--footer .list--content__item .footer--social {/*icon mang xa hoi*/
+  display: flex;
+  align-items: center;
+  column-gap: 12px;/*khoang cach giua cac icon*/
+  margin-top: 28px;/*day toan bo icon xuong duoi, cach phan nd phia tren 28px*/
+}
+.footer .bottom--footer .list--content__item .footer--social svg {
+  width: 18px;
+  height: 18px;
+  stroke: white;
+}
+.footer .bottom--footer .list--content__item .footer--social svg:last-child {
+  width: 23px;
+  height: 23px;
+}
+.footer .bottom--footer .list--content__item .footer--copyright {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.footer .bottom--footer .list--content__item .footer--address {
+  font-size: 14px;
+  margin-top: 4px;
+}
+.footer .bottom--footer .list--content__item .footer--linkMap {
+  display: inline-block;/* Cho phép thiết lập margin-top và tạo vùng bấm chuẩn cho link */
+  margin-top: 12px;
+  font-size: 1.2rem;
+  color: rgb(94, 216, 255);
+}
+.footer .bottom--footer .list--content__item .list--content2 {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}
+.footer .bottom--footer .list--content__item .list--content2__item {
+  font-size: 1.4rem;
+}
+.footer .bottom--footer .list--content__item .list--content2__item a {
+  color: white;
+}
+.footer .bottom--footer .list--content__item .menu--linkFooter {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.footer .bottom--footer .list--content__item .menu--linkFooter__item a {/*phan gach chan*/
+  display: inline-block;
+  padding: 4px 0;/* Tạo không gian nhỏ trên dưới để vùng bấm rộng hơn và border không dính sát chữ */
+  color: white;
+  border-bottom: 1px solid transparent;/* Tạo một đường viền "tàng hình" để giữ chỗ trước */
+  font-size: 1.6rem;
+  transition: all 0.2s linear;
+}
+.footer .bottom--footer .list--content__item .menu--linkFooter__item a:hover {
+  border-color: #b37475;
+}

@@ -1,0 +1,404 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  transition: background 0.15s ease;
+}
+.header .header__child {
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  align-items: center;
+  column-gap: 20px;
+  padding: 12px 0;
+}
+.header .header__child .header--logo {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+.header .header__child .header--logo a img {
+  width: auto;
+  height: 74px;
+}
+.header .header__child .nav--menu {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  justify-content: flex-end;
+}
+.header .header__child .header--menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  column-gap: 16px;
+}
+.header .header__child .header--menu__item:not(:first-child) a {
+  padding: 5px 0 14px;
+}
+.header .header__child .header--menu__item:not(:first-child) a::after {
+  opacity: 0;
+  visibility: hidden;
+}
+.header .header__child .header--menu__item:first-child a {
+  padding: 3px 0 10px;
+}
+.header .header__child .header--menu__item a {
+  position: relative;
+  display: inline-block;
+  font-size: 1.8rem;
+  white-space: nowrap;
+  font-weight: 600;
+  color: white;
+}
+.header .header__child .header--menu__item a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: white;
+  transition: all 0.2s linear;
+}
+.header .header__child .header--menu__item a:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+.header .header__child .header--menu__item a svg {
+  width: 22px;
+  height: 22px;
+  stroke: white;
+}
+.header .header__child .header--menu .header--control {
+  display: flex;
+  align-items: center;
+  column-gap: 21px;
+  padding-bottom: 9px;
+}
+.header .header__child .header--menu .header--control .control--languge {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  position: relative;
+}
+.header .header__child .header--menu .header--control .control--languge span {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: white;
+}
+.header .header__child .header--menu .header--control .control--languge svg {
+  width: 12px;
+  height: 12px;
+  fill: white;
+}
+.header .header__child .header--menu .header--control .control--search {
+  cursor: pointer;
+}
+.header .header__child .header--menu .header--control .control--search svg {
+  width: 18px;
+  height: 18px;
+  stroke: white;
+}
+.header .header__child .header--menu .header--control .menu--bar {
+  --timeRun: 2s;
+  --sizeLine: 1px;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: #721114;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.header .header__child .header--menu .header--control .menu--bar .top,
+.header .header__child .header--menu .header--control .menu--bar .bottom,
+.header .header__child .header--menu .header--control .menu--bar .left,
+.header .header__child .header--menu .header--control .menu--bar .right {
+  position: absolute;
+  background: white;
+  box-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 4px #fff;
+}
+.header .header__child .header--menu .header--control .menu--bar .top,
+.header .header__child .header--menu .header--control .menu--bar .bottom {
+  height: var(--sizeLine);
+}
+.header .header__child .header--menu .header--control .menu--bar .left,
+.header .header__child .header--menu .header--control .menu--bar .right {
+  width: var(--sizeLine);
+}
+.header .header__child .header--menu .header--control .menu--bar .top {
+  left: 0;
+  top: 0;
+  animation: animateTop var(--timeRun) linear infinite
+    calc(var(--timeRun) / 2 / 2 * 1);
+}
+.header .header__child .header--menu .header--control .menu--bar .bottom {
+  bottom: 0;
+  right: 0;
+  animation: animateBottom var(--timeRun) linear infinite
+    calc(var(--timeRun) / 2 / 2 * 3);
+}
+.header .header__child .header--menu .header--control .menu--bar .left {
+  left: 0;
+  bottom: 0;
+  animation: animateLeft var(--timeRun) linear infinite;
+}
+.header .header__child .header--menu .header--control .menu--bar .right {
+  right: 0;
+  top: 0;
+  animation: animateRight var(--timeRun) linear infinite
+    calc(var(--timeRun) / 2 / 2 * 2);
+}
+@keyframes animateLeft {
+  0% {
+    top: 100%;
+    height: 0%;
+  }
+  25% {
+    top: 0;
+    height: 100%;
+  }
+  50% {
+    top: 0;
+    height: 0%;
+  }
+}
+@keyframes animateTop {
+  0% {
+    left: 0;
+    width: 0%;
+  }
+  25% {
+    left: 0;
+    width: 100%;
+  }
+  50% {
+    left: calc(100% - 1px);
+    width: 0%;
+  }
+}
+@keyframes animateRight {
+  0% {
+    top: 0;
+    height: 0%;
+  }
+  25% {
+    top: 0;
+    height: 100%;
+  }
+  50% {
+    top: calc(100% - 1px);
+    height: 0%;
+  }
+}
+@keyframes animateBottom {
+  0% {
+    right: 0;
+    width: 0%;
+  }
+  25% {
+    right: 0;
+    width: 100%;
+  }
+  50% {
+    right: calc(100% - 1px);
+    width: 0%;
+  }
+}
+.header .header__child .header--menu .header--control .menu--bar svg {
+  width: 24px;
+  height: 24px;
+  stroke: white;
+}
+
+.active--header {
+  position: fixed;
+  background: rgb(128, 22, 24);
+  top: 0;
+  left: 0;
+  animation: animateHeader 0.3s linear;
+}
+@keyframes animateHeader {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.out--header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: animateOutHeader 0.3s linear;
+}
+@keyframes animateOutHeader {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+.mobile-menu {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 110%;
+  width: calc(100% - 24px);
+  background-color: #801618;
+  padding: 10px;
+}
+
+.mobile-menu.is-active {
+  display: block;
+}
+
+.mobile-menu__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu__item {
+  text-align: left;
+}
+
+.mobile-menu__item a {
+  display: inline-block;
+  padding: 10px;
+  font-size: 1.8rem;
+  white-space: nowrap;
+  font-weight: bolder;
+  color: white;
+}
+
+.mobile-menu__search a {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.mobile-menu__search svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media screen and (min-width: 1201px) {
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+/* search overlay */
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.search-overlay.active {
+  display: flex !important;
+}
+
+.search-overlay__close {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.search-overlay__close svg {
+  width: 30px;
+  height: 30px;
+  stroke: white;
+}
+
+.search-overlay__content {
+  width: 80%;
+  max-width: 600px;
+}
+
+.search-overlay__content input {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+.language-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fdfbfb;
+  border-radius: 4px;
+  z-index: 10;
+  min-width: 30px;
+  height: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.language-dropdown.show {
+  display: block;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.language-dropdown a {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+
+  color: #801618;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .language-dropdown {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .language-dropdown.show {
+    transform: translateY(0) translateX(-50%);
+  }
+
+  .language-dropdown a {
+    font-size: 1.6rem;
+    padding: 8px 12px;
+    height: auto;
+    line-height: normal;
+  }
+}
+.control--languge svg {
+  transition: transform 0.3s ease;
+}
+
+.control--languge.open svg {
+  transform: rotate(180deg);
+}
+.control--search {
+  cursor: pointer;
+}

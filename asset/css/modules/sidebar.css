@@ -1,0 +1,41 @@
+.side-toolbar {
+  position: fixed;
+  right: 20px;
+  bottom: 60px;
+  z-index: 99999;
+}
+#backToTopBtn {
+  display: none;
+}
+.side-toolbar__item.gray a {
+  background: rgb(82, 82, 82);
+}
+.side-toolbar__item.red a {
+  background: rgb(161, 19, 22);
+}
+.side-toolbar__item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  transition: transform 0.3s ease-in-out;
+}
+.side-toolbar__item:not(:first-child) {
+  margin-top: 8px;
+}
+.side-toolbar__item a:hover {
+  transform: scale(1.2);
+}
+.side-toolbar__item svg {
+  width: 20px;
+  height: 20px;
+  stroke: white;
+}
+.side-toolbar__item:first-child a:hover {
+  background-color: black;
+}
+.side-toolbar__item:nth-child(2) a:hover {
+  background-color: black;
+}
